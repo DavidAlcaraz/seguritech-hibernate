@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -32,6 +31,13 @@ public class RolController {
         System.out.println(roles.size());
         return roles;
     }
+
+    /*@GetMapping(value = "/especialidades")
+    public List<Especialidades> listAll() {
+        List<Especialidades> especialidades = EspecialidadesRepository.findAll();
+        System.out.println(especialidades.size());
+        return especialidades;
+    }*/
 
     @GetMapping("/rol/{id}")
     public ResponseEntity<Rol> getRol(@PathVariable("id") Long id) {

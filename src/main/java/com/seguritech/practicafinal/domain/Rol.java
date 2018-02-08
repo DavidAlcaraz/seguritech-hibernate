@@ -12,17 +12,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import javax.sql.DataSource;
+
 /**
  *
  * @author Werner
  */
 @Entity
-@Table(name = "ROLES")
+@Table(name = "especialidades")
 public class Rol {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ROL_ID")
+    @Column(name = "especialidad_id")
     private Long id;
 
     private String descripcion;
